@@ -88,9 +88,20 @@ The following limitations apply to tags:
    > * The following Azure resources only support 15 tags:
    >     * Azure Automation
    >     * Azure Content Delivery Network (CDN)
-   >     * Azure DNS (Zone and A records)
+   >     * Azure DNS Zone (and A record)
+   >     * Azure Private DNS Zone (and Virtual network Link)
    >     * Azure Log Analytics Saved Search
 
+   > [!NOTE]
+   > If you use Azure Policy govern tags, you can use a resouce selector on the policy assingments to ensure the following resouce types are exluded:
+   >
+   > * Microsoft.Automation/automationAccounts
+   > * Microsoft.Cdn/profiles
+   > * Microsoft.Network/dnsZones
+   > * Microsoft.Network/dnsZones/A
+   > * Microsoft.Network/privateDnsZones
+   > * Microsoft.Network/privateDnsZones/virtualNetworkLinks
+   > * Microsoft.OperationalInsights/workspaces/savedSearches
 ## Next steps
 
 * Not all resource types support tags. To determine if you can apply a tag to a resource type, see [Tag support for Azure resources](tag-support.md).
